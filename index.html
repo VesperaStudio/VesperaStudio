@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout | Vespera Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-fixed-dim": "#d3bdf4",
+            "secondary": "#c8c6c6",
+            "surface": "#16121b",
+            "on-background": "#e8dfed",
+            "primary-fixed": "#ecdcff",
+            "on-tertiary-fixed": "#211b00",
+            "on-secondary": "#303030",
+            "inverse-primary": "#685685",
+            "surface-container-lowest": "#100d15",
+            "tertiary-fixed-dim": "#dac769",
+            "secondary-container": "#474747",
+            "inverse-surface": "#e8dfed",
+            "primary": "#d3bdf4",
+            "primary-container": "#33224e",
+            "error-container": "#93000a",
+            "surface-container-highest": "#38333d",
+            "secondary-fixed-dim": "#c8c6c6",
+            "secondary-fixed": "#e4e2e1",
+            "on-tertiary-fixed-variant": "#524700",
+            "on-primary": "#392854",
+            "inverse-on-surface": "#332e38",
+            "on-secondary-fixed": "#1b1c1c",
+            "surface-container-low": "#1e1a23",
+            "on-error": "#690005",
+            "background": "#16121b",
+            "on-primary-container": "#9d89bc",
+            "error": "#ffb4ab",
+            "on-surface-variant": "#cbc4cd",
+            "surface-variant": "#38333d",
+            "surface-dim": "#16121b",
+            "surface-bright": "#3c3741",
+            "on-primary-fixed-variant": "#503e6c",
+            "surface-container-high": "#2d2832",
+            "on-surface": "#e8dfed",
+            "outline-variant": "#49454c",
+            "surface-container": "#221e27",
+            "tertiary-container": "#bdac51",
+            "on-secondary-container": "#b6b5b4",
+            "tertiary-fixed": "#f7e382",
+            "surface-tint": "#d3bdf4",
+            "on-error-container": "#ffdad6",
+            "outline": "#958f97",
+            "on-tertiary-container": "#4a3f00",
+            "on-primary-fixed": "#23123e",
+            "on-secondary-fixed-variant": "#474747",
+            "tertiary": "#dac76a",
+            "on-tertiary": "#393000"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .custom-gradient-btn {
+      background: linear-gradient(135deg, #d3bdf4 0%, #33224e 100%);
+    }
+    input:focus {
+      outline: none !important;
+      box-shadow: 0 0 0 2px rgba(211, 189, 244, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 min-h-screen">
+<!-- Navigation Suppression: Checkout is task-focused. No Global Nav cluster. -->
+<header class="fixed top-0 w-full z-50 bg-[#16121b]/60 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-serif italic text-[#d3bdf4]">Vespera Studio</div>
+<a class="text-[#cbc4cd] hover:text-[#d3bdf4] transition-colors duration-300 flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span class="font-label text-xs uppercase tracking-widest">Back to Gallery</span>
+</a>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Checkout Form Canvas -->
+<div class="lg:col-span-8 space-y-12">
+<header>
+<h1 class="font-headline text-4xl md:text-5xl italic tracking-tight text-primary mb-2">Finalize Your Order</h1>
+<p class="font-label text-sm uppercase tracking-[0.2em] text-on-surface-variant/60">Artisanal Crochet &amp; Midnight Dreams</p>
+</header>
+<!-- Customer Details Section -->
+<section class="bg-surface-container-low p-8 rounded-xl space-y-8">
+<div class="flex items-center gap-4">
+<span class="font-headline text-2xl italic text-tertiary">01</span>
+<h2 class="font-headline text-2xl">Customer Details</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-wider text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/30 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="Evelina Thorne" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-wider text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/30 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="evelina@vespera.studio" type="email"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label text-xs uppercase tracking-wider text-on-surface-variant">Shipping Address</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/30 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="124 Rue du Faubourg Saint-Honoré" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-wider text-on-surface-variant">City</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/30 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="Paris" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-wider text-on-surface-variant">Postal Code</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/30 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="75008" type="text"/>
+</div>
+</div>
+</section>
+<!-- Shipping Method Section -->
+<section class="bg-surface-container-low p-8 rounded-xl space-y-8">
+<div class="flex items-center gap-4">
+<span class="font-headline text-2xl italic text-tertiary">02</span>
+<h2 class="font-headline text-2xl">Shipping Method</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Mondial Relay -->
+<label class="relative group cursor-pointer">
+<input checked="" class="peer sr-only" name="shipping" type="radio"/>
+<div class="p-6 rounded-xl bg-surface-container-high border-2 border-transparent peer-checked:border-primary/40 transition-all hover:bg-surface-container-highest">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="local_shipping">local_shipping</span>
+<span class="font-headline italic text-on-surface">€4.90</span>
+</div>
+<div class="font-bold text-on-surface">Mondial Relay</div>
+<div class="text-sm text-on-surface-variant/70">Pick-up point, 3-5 days</div>
+</div>
+</label>
+<!-- La Poste -->
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="shipping" type="radio"/>
+<div class="p-6 rounded-xl bg-surface-container-high border-2 border-transparent peer-checked:border-primary/40 transition-all hover:bg-surface-container-highest">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<span class="font-headline italic text-on-surface">€8.50</span>
+</div>
+<div class="font-bold text-on-surface">La Poste</div>
+<div class="text-sm text-on-surface-variant/70">Home delivery, 2-3 days</div>
+</div>
+</label>
+</div>
+</section>
+<!-- Payment Method Section -->
+<section class="bg-surface-container-low p-8 rounded-xl space-y-8">
+<div class="flex items-center gap-4">
+<span class="font-headline text-2xl italic text-tertiary">03</span>
+<h2 class="font-headline text-2xl">Payment Method</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Credit Card -->
+<label class="relative group cursor-pointer">
+<input checked="" class="peer sr-only" name="payment" type="radio"/>
+<div class="p-4 rounded-xl bg-surface-container-high border-2 border-transparent peer-checked:border-primary/40 text-center transition-all hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-primary mb-2 block" data-icon="credit_card">credit_card</span>
+<span class="text-sm font-label uppercase tracking-widest text-on-surface">Credit Card</span>
+</div>
+</label>
+<!-- PayPal -->
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="payment" type="radio"/>
+<div class="p-4 rounded-xl bg-surface-container-high border-2 border-transparent peer-checked:border-primary/40 text-center transition-all hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-primary mb-2 block" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="text-sm font-label uppercase tracking-widest text-on-surface">PayPal</span>
+</div>
+</label>
+<!-- Revolut -->
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="payment" type="radio"/>
+<div class="p-4 rounded-xl bg-surface-container-high border-2 border-transparent peer-checked:border-primary/40 text-center transition-all hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-primary mb-2 block" data-icon="currency_exchange">currency_exchange</span>
+<span class="text-sm font-label uppercase tracking-widest text-on-surface">Revolut</span>
+</div>
+</label>
+</div>
+<!-- Card Details Input (Visible by Default) -->
+<div class="pt-4 space-y-4">
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-wider text-on-surface-variant">Card Number</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/30 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="**** **** **** 4452" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-wider text-on-surface-variant">Expiry</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/30 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="MM/YY" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-wider text-on-surface-variant">CVC</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/30 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="***" type="password"/>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Order Summary Column -->
+<aside class="lg:col-span-4">
+<div class="sticky top-32 space-y-6">
+<div class="bg-surface-container-high p-8 rounded-xl shadow-2xl shadow-surface-container-lowest/50 border border-outline-variant/10">
+<h3 class="font-headline text-2xl italic mb-8">Order Summary</h3>
+<div class="space-y-6 mb-8">
+<!-- Item 1 -->
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container-highest flex-shrink-0">
+<img alt="Crochet Top" class="w-full h-full object-cover" data-alt="close-up of artisanal hand-crocheted violet silk yarn texture with intricate lace patterns and soft moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdWJn3nV7H3XMG7LZvO3GZf32fdUKy5ZxDo-YxJSTWL16re5e-C_6iwZzXsjyvG1YWcng_Rfok8dT46D1EH6QDuHOCNg8DRuxM6SvMPxxULjCynv3SAWdI3TAI4Uau7tG-M8-W9EhW3ommj5l6qFmYHvFQbs15uvF57o4YoQFXucPqLjyHxZhrP3PBaOQx5mT6f-vhnSkBYOkiyRuUI4LQJA0kP2IWlf-xQYNirsQYZsUwBz1gLAeu-Xna0cjKT6V8QPa4OYcGn1lg"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between">
+<span class="font-bold text-on-surface">Luna Camisole</span>
+<span class="text-primary">€124</span>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/60">Midnight Plum / Alpaca</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container-highest flex-shrink-0">
+<img alt="Crochet Accessory" class="w-full h-full object-cover" data-alt="close-up of a delicate handmade crochet scarf in soft lavender and charcoal tones resting on a velvet surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7qnuUAgIz1QKS7DUIQc7WcAnHjad98Rw5UGC80c0VU5T7PPF33xtlBc4pRXUc3KxS4XR4PBAhNYs3SsaPD388F2iMrMQ6wGxWBlKK3CgdDnQW0iKdbT9au_kICS2j0Gp1yuMEweBv4dM-ke4JDsPDNp21wwAFOm4VjbjkyAjjYJrjW7n5OB6tMjd54op87ESxk6O9s7iQUjYHt4KCBfRZxP70StRDOwXjEvi-tOLxqmJyFRP8Gx12cmLkSF0Ts0NGX8R1-VItqSeL"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between">
+<span class="font-bold text-on-surface">Vespera Scarf</span>
+<span class="text-primary">€68</span>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/60">Shadow / Organic Cotton</span>
+</div>
+</div>
+</div>
+<div class="space-y-4 pt-6 border-t border-outline-variant/20">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal</span>
+<span>€192.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Shipping</span>
+<span>€4.90</span>
+</div>
+<div class="flex justify-between items-center pt-4">
+<span class="font-headline text-xl">Total</span>
+<span class="font-headline text-2xl text-tertiary">€196.90</span>
+</div>
+</div>
+<button class="w-full mt-10 custom-gradient-btn text-on-primary py-5 rounded-xl font-label uppercase tracking-[0.2em] font-bold shadow-lg shadow-primary/10 hover:opacity-90 active:scale-[0.98] transition-all">
+              Confirm Purchase
+            </button>
+<p class="text-[10px] text-center mt-6 text-on-surface-variant/50 uppercase tracking-widest leading-relaxed px-4">
+              By confirming, you agree to our handcrafted terms and midnight shipping policies.
+            </p>
+</div>
+<!-- Trust Badge -->
+<div class="flex items-center justify-center gap-6 py-4 opacity-40">
+<span class="material-symbols-outlined text-sm" data-icon="lock">lock</span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em]">Secure Encryption</span>
+<span class="material-symbols-outlined text-sm" data-icon="eco">eco</span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em]">Eco-Packaged</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Shell (Standard Filtered) -->
+<footer class="bg-[#1e1a23] w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-7xl mx-auto">
+<div class="text-lg font-serif italic text-[#d3bdf4]">Vespera Studio</div>
+<div class="flex gap-8">
+<a class="font-sans text-sm tracking-wide uppercase text-[#cbc4cd]/60 hover:text-[#bdac51] transition-colors duration-500" href="#">Contact</a>
+<a class="font-sans text-sm tracking-wide uppercase text-[#cbc4cd]/60 hover:text-[#bdac51] transition-colors duration-500" href="#">Shipping Policy</a>
+<a class="font-sans text-sm tracking-wide uppercase text-[#cbc4cd]/60 hover:text-[#bdac51] transition-colors duration-500" href="#">Privacy</a>
+</div>
+<div class="font-sans text-sm tracking-wide uppercase text-[#cbc4cd]/60">
+        © 2024 Vespera Studio. Artisanal Crochet.
+      </div>
+</div>
+</footer>
+</body></html>
