@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vespera Studio | Artisanal Crochet Catalogue</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#d3bdf4",
+              "secondary": "#c8c6c6",
+              "surface": "#16121b",
+              "on-background": "#e8dfed",
+              "primary-fixed": "#ecdcff",
+              "on-tertiary-fixed": "#211b00",
+              "on-secondary": "#303030",
+              "inverse-primary": "#685685",
+              "surface-container-lowest": "#100d15",
+              "tertiary-fixed-dim": "#dac769",
+              "secondary-container": "#474747",
+              "inverse-surface": "#e8dfed",
+              "primary": "#d3bdf4",
+              "primary-container": "#33224e",
+              "error-container": "#93000a",
+              "surface-container-highest": "#38333d",
+              "secondary-fixed-dim": "#c8c6c6",
+              "secondary-fixed": "#e4e2e1",
+              "on-tertiary-fixed-variant": "#524700",
+              "on-primary": "#392854",
+              "inverse-on-surface": "#332e38",
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-container-low": "#1e1a23",
+              "on-error": "#690005",
+              "background": "#16121b",
+              "on-primary-container": "#9d89bc",
+              "error": "#ffb4ab",
+              "on-surface-variant": "#cbc4cd",
+              "surface-variant": "#38333d",
+              "surface-dim": "#16121b",
+              "surface-bright": "#3c3741",
+              "on-primary-fixed-variant": "#503e6c",
+              "surface-container-high": "#2d2832",
+              "on-surface": "#e8dfed",
+              "outline-variant": "#49454c",
+              "surface-container": "#221e27",
+              "tertiary-container": "#bdac51",
+              "on-secondary-container": "#b6b5b4",
+              "tertiary-fixed": "#f7e382",
+              "surface-tint": "#d3bdf4",
+              "on-error-container": "#ffdad6",
+              "outline": "#958f97",
+              "on-tertiary-container": "#4a3f00",
+              "on-primary-fixed": "#23123e",
+              "on-secondary-fixed-variant": "#474747",
+              "tertiary": "#dac76a",
+              "on-tertiary": "#393000"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(45, 40, 50, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .gradient-button {
+        background: linear-gradient(135deg, #d3bdf4 0%, #33224e 100%);
+      }
+      .text-glow {
+        text-shadow: 0 0 15px rgba(211, 189, 244, 0.3);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#16121b]/60 backdrop-blur-xl no-border shadow-none">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-serif italic text-[#d3bdf4]">Vespera Studio</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-[#d3bdf4] border-b border-[#d3bdf4] transition-colors duration-300 font-serif italic tracking-tight" href="#">Shop</a>
+<a class="text-[#cbc4cd] hover:text-[#d3bdf4] transition-colors duration-300 font-serif italic tracking-tight" href="#">About</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[#d3bdf4]">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen">
+<div class="flex flex-col md:flex-row gap-12">
+<!-- Sidebar Navigation -->
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-32 space-y-10">
+<div>
+<h2 class="font-headline italic text-2xl text-primary mb-6 text-glow">Collections</h2>
+<nav class="flex flex-col gap-4">
+<a class="flex items-center justify-between group p-3 rounded-xl bg-surface-container-high text-primary border-l-2 border-primary" href="#">
+<span class="font-label uppercase tracking-widest text-sm">Pluches</span>
+<span class="text-xs opacity-60">12</span>
+</a>
+<a class="flex items-center justify-between group p-3 rounded-xl hover:bg-surface-container-low transition-colors text-on-surface-variant" href="#">
+<span class="font-label uppercase tracking-widest text-sm">Déco</span>
+<span class="text-xs opacity-40">08</span>
+</a>
+<a class="flex items-center justify-between group p-3 rounded-xl hover:bg-surface-container-low transition-colors text-on-surface-variant" href="#">
+<span class="font-label uppercase tracking-widest text-sm">Accessoires</span>
+<span class="text-xs opacity-40">15</span>
+</a>
+</nav>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/10">
+<h3 class="font-label uppercase tracking-widest text-xs text-tertiary mb-3">Filters</h3>
+<div class="space-y-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-4 h-4 rounded border border-outline-variant group-hover:border-primary transition-colors"></div>
+<span class="text-sm text-on-surface-variant">In Stock Only</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-4 h-4 rounded border border-outline-variant group-hover:border-primary transition-colors"></div>
+<span class="text-sm text-on-surface-variant">Organic Cotton</span>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Product Grid -->
+<section class="flex-grow">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-12 gap-4">
+<h1 class="font-headline text-5xl md:text-6xl text-on-surface tracking-tighter">L'Atelier <span class="italic text-primary font-light">Vespera</span></h1>
+<span class="font-label uppercase tracking-widest text-xs text-on-surface-variant/60">Showing 35 unique items</span>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-highest">
+<img alt="Crochet lavender bunny plush" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0h1zqI5UF6hak19s2jVgrgjwCzyOBNH1ckZA0WbtpkMJ3402nOSmkZJDSX5c_nwyWGk2totL6TJuMlehN_Lu9DBUPJcMTXbNwlbSP9XkiQ7ad9fuBg54FeIJOypbXvbdCbgVlicsn3JWyHQ-YRGzYA6VZ35VbeDXfBIrMbQ9IdmgvcoHHfpsbFIkGdEm0LeDeDYmaUSKKt8qLxSZ4NIpCMa2j_XfsjPOFyW6hsrOumvYu2bBToV4o7hTwu5f5aRWtoLfY5f5Agl7o"/>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-label uppercase tracking-[0.2em] text-[10px] text-tertiary mb-1">Limited Edition</div>
+<h3 class="font-headline text-xl text-on-surface">Midnight Hare</h3>
+</div>
+<span class="font-body font-semibold text-primary">€48.00</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded-full bg-tertiary-container/20 text-on-tertiary-container text-[10px] font-label uppercase">Alpaca Blend</span>
+</div>
+<button class="mt-4 w-full py-3 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-label uppercase tracking-widest text-xs font-bold scale-100 active:scale-95 transition-transform">
+                            Détails
+                        </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-highest">
+<img alt="Handmade crochet moon pillow" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAw3mPWgiuiCrdwpAhs0hR771TFCj5UKCNpxdCJ8nfI7yLxr6HjFW8yDKExpzZzeCDaMW4IopokuWcNVSBvighceGerQ6nLn4P8_4qQ1SAxd8yg-VGWDU8mFJS7FYVKVliMVYTN8_4DFFhUP_-33s3fE2OqV3mvjFL4Eq6pAKBTqjdcs8I4A-_9VWM_2D7uSLWG9GMVwJ_OIKsatFEAsIkUIxKcf3Rn3B8FqdSmBDNQKdQ3zfhsy1C6M8CMBujBdJcCrHjKPS-htc5"/>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-label uppercase tracking-[0.2em] text-[10px] text-on-surface-variant/60 mb-1">Déco</div>
+<h3 class="font-headline text-xl text-on-surface">Celestial Pillow</h3>
+</div>
+<span class="font-body font-semibold text-primary">€65.00</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px] font-label uppercase">Soft Velvet Yarn</span>
+</div>
+<button class="mt-4 w-full py-3 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-label uppercase tracking-widest text-xs font-bold scale-100 active:scale-95 transition-transform">
+                            Détails
+                        </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 lg:col-span-1">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-highest">
+<img alt="Artisanal crochet bag" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxFZdFLu9gqt3IYD0Se_piyBoxEkPIeJwpK0iIjWSEs8m41Oac1XNKggI0l5UIWzE1NX2dsaAZbb62ocmAbD8WRuIrVxZlV7hoFHCfMJRoYoAhrhT5a95gycW8UMXWcBvf_Top2G0WpvU1HEXW1X2iHQKQqH2PeRz7wHtZzW866FbFtbOdnq9SpAHvbDsJGY0QDp21P68UYYLSEcBadDte04G_8ZBBYHih8cRErrDtmUv29mvWDbdN7Co1QWN_y12Php01ukYBcUuD"/>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-label uppercase tracking-[0.2em] text-[10px] text-tertiary mb-1">New In</div>
+<h3 class="font-headline text-xl text-on-surface">Vespera Tote</h3>
+</div>
+<span class="font-body font-semibold text-primary">€110.00</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded-full bg-tertiary-container/20 text-on-tertiary-container text-[10px] font-label uppercase">Pure Wool</span>
+</div>
+<button class="mt-4 w-full py-3 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-label uppercase tracking-widest text-xs font-bold scale-100 active:scale-95 transition-transform">
+                            Détails
+                        </button>
+</div>
+</div>
+<!-- Product Card 4 - Horizontal Special -->
+<div class="group relative md:col-span-2 flex flex-col md:flex-row bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500">
+<div class="md:w-1/2 aspect-square md:aspect-auto overflow-hidden bg-surface-container-highest">
+<img alt="Crochet kit collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdYG0uvpYGmZmaldssGPsvDDomLsksZyXNlgrTY9VmKnI0vfXPFFYM5hAH3WLAUokxQsFiDrxNmMrzrMP7ll1WHcgWGUnSjO6qycJYODZNJwo9emO67ItF1IEGmMoEWmt_PcSOC0XbqIpn3BcyQGk3UH4EIeDRMIEocGnAQorqrr36hzQpZnn5NQ5BfGXk1KS7P_S5yPbyc-v_ZcOIpFoXQLBwvfsNyDnyGV13DO053ulxuyOnGFtLKporJn3UkZ_K95_wXID34y6D"/>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-center gap-6">
+<div>
+<div class="font-label uppercase tracking-[0.3em] text-[10px] text-tertiary mb-2">Signature Kit</div>
+<h3 class="font-headline text-3xl text-on-surface leading-tight">Master Atelier <br/><span class="italic text-primary">Crochet Bundle</span></h3>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Everything you need to create your first Midnight Hare. Includes premium alpaca wool, custom hooks, and the illustrated guide.</p>
+<div class="flex items-center gap-6">
+<span class="font-body text-2xl font-semibold text-primary">€89.00</span>
+<button class="px-8 py-3 rounded-xl bg-surface-container-highest text-primary border border-primary/20 font-label uppercase tracking-widest text-xs font-bold hover:bg-primary hover:text-on-primary transition-all">
+                                Détails
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-highest">
+<img alt="Small crochet cactus deco" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkWkJNnTx5jhVSkQdzPRrvVONTKcOyxnkXWKxNyiy9kyyb3RamxTXk_oN8j-KFwK87iWLe2A0RHBixXEV1GV2Ytk1ErB8I7CqhOwm8SIKqpGZLpQiSrnnp0kIYnLdAH2Gs3eVS7a-Kgxs2srQWedjISkHUfr9aQ2PmcdoLR_5J8Hy-Q66nv7llRgHAcNdPCFPHVbEMf56kV7UGvQ_ylIwNW366tpjubvHHNVycnHoZ_DJFgdDPgTvRzoAL3rHdhHo3QKni4fTVJVZN"/>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-label uppercase tracking-[0.2em] text-[10px] text-on-surface-variant/60 mb-1">Déco</div>
+<h3 class="font-headline text-xl text-on-surface">Petite Cactus</h3>
+</div>
+<span class="font-body font-semibold text-primary">€22.00</span>
+</div>
+<button class="mt-4 w-full py-3 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-label uppercase tracking-widest text-xs font-bold scale-100 active:scale-95 transition-transform">
+                            Détails
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1e1a23] w-full py-12 px-8 tonal-shift">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-lg font-serif italic text-[#d3bdf4]">Vespera Studio</div>
+<p class="font-sans text-sm tracking-wide uppercase text-[#cbc4cd]/60">© 2024 Vespera Studio. Artisanal Crochet.</p>
+</div>
+<div class="flex gap-12">
+<div class="flex flex-col gap-3">
+<span class="font-label uppercase tracking-widest text-[10px] text-[#d3bdf4]">Shop</span>
+<a class="font-sans text-sm tracking-wide uppercase text-[#cbc4cd]/60 hover:text-[#bdac51] transition-colors duration-500" href="#">Contact</a>
+<a class="font-sans text-sm tracking-wide uppercase text-[#cbc4cd]/60 hover:text-[#bdac51] transition-colors duration-500" href="#">Shipping Policy</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label uppercase tracking-widest text-[10px] text-[#d3bdf4]">Legal</span>
+<a class="font-sans text-sm tracking-wide uppercase text-[#cbc4cd]/60 hover:text-[#bdac51] transition-colors duration-500" href="#">Privacy</a>
+<a class="font-sans text-sm tracking-wide uppercase text-[#cbc4cd]/60 hover:text-[#bdac51] transition-colors duration-500" href="#">Terms</a>
+</div>
+</div>
+<div class="flex gap-6">
+<a class="text-[#cbc4cd]/60 hover:text-[#d3bdf4] transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-[#cbc4cd]/60 hover:text-[#d3bdf4] transition-colors" href="#"><span class="material-symbols-outlined">favorite</span></a>
+</div>
+</div>
+</footer>
+</body></html>
